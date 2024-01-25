@@ -1,0 +1,14 @@
+{
+  "name": "dhkdtld37",
+  "version": "0.1.0",
+  "description": "dhkdtld37",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dhkdtld37"
+  ],
+  "author": "dhkdtld37",
+  "license": "ISC"
+}
