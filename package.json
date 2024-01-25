@@ -10,7 +10,7 @@
     "dhkdtld37"
   ],
   "author": "dhkdtld37",
-  "license": "ISC"
+  "license": "ISC",
   "bin": {
     "dhkdtld37": "./index.js"
   }
