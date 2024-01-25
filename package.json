@@ -13,4 +13,5 @@
   "license": "ISC"
   "bin": {
     "dhkdtld37": "./index.js"
+  }
 }
