@@ -22,7 +22,7 @@ console.log(`
 const argv = process.argv;
 
 if (argv.length < 4) {
-  console.log("사용법: node random-name.js 홍길동 임꺽정 이순신");
+  console.log("사용법: node random-name.js 이름을 입력하시오");
   process.exit(1);
 }
 
