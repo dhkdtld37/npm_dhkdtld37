@@ -19,12 +19,16 @@ console.log(`
                                                                                 
 `);
 
-const args = process.argv.slice(2);
-const randomIndex = Math.floor(Math.random() * args.length);
+const argv = process.argv;
 
-if (args.length > 0) {
-    console.log("발표자: " + args[randomIndex]);
-} else {
-    console.log("사용법: node random-name.js 홍길동 임꺽정 이순신");
-    process.exit(1);
+if (argv.length < 4) {
+  console.log("사용법: node random-name.js 홍길동 임꺽정 이순신");
+  process.exit(1);
 }
+
+const names = argv.slice(2).slice(0, -1);
+
+const randomName = names[Math.floor(Math.random() * names.length)];
+
+console.log(`발표자:${randomName}`);
+
