@@ -12,6 +12,6 @@
   "author": "dhkdtld37",
   "license": "ISC",
   "bin": {
-    "dhkdtld37": "./index.js"
+    "dhkdtld37": "index.js"
   }
 }
