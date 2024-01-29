@@ -19,16 +19,24 @@ console.log(`
                                                                                 
 `);
 
-const argv = process.argv;
+class People {
+  constructor(peoples = []) {
+    this.peoples = peoples;
+  }
 
-if (argv.length < 4) {
-  console.log("사용법: node random-name.js 이름을 입력하시오");
-  process.exit(1);
+  select() {
+    const randomName = this.peoples[Math.floor(Math.random() * this.peoples.length)];
+    console.log(`발표자 : ${randomName}`);
+  }
 }
 
-const names = argv.slice(2).slice(0, -1);
+const [, , ...names] = process.argv; // Rest Parameter를 사용하여 필요한 부분을 추출
 
-const randomName = names[Math.floor(Math.random() * names.length)];
+if (names.length < 3) {
+  console.log("최소 3명 이상의 발표자를 입력하시오");
+  process.exit();
+}
 
-console.log(`발표자:${randomName}`);
+const people = new People(names);
+people.select();
 
