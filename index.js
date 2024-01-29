@@ -19,16 +19,25 @@ console.log(`
                                                                                 
 `);
 
-const argv = process.argv;
+class People {
+	constructor(peoples){
+		this.peoples = peoples;
+	}
 
-if (argv.length < 4) {
-  console.log("사용법: node random-name.js 이름을 입력하시오");
-  process.exit(1);
+	select() {
+		const randomName = names [Math.floor(Math.random() * names.length)];
+ 		console.log(`발표자 : ${randomName}`); 
+	}
 }
 
-const names = argv.slice(2).slice(0, -1);
+const argv = process.argv;	// 입력
+const names = argv.slice(2);	// argv 배열에서 인덱스 2부터 끝까지의 부분 배열을 추출
 
-const randomName = names[Math.floor(Math.random() * names.length)];
+if (names.length < 3) {
+  console.log("최소 3명 이상의 발표자를 입력하시오");
+  process.exit();
+}
 
-console.log(`발표자:${randomName}`);
+var people = new People(names);
+people.select();
 
